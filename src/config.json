@@ -878,6 +878,17 @@
           "author": "songsong"
         },
         {
+          "version": "1.0.0",
+          "name": "AreaCode",
+          "type": "component",
+          "cName": "电话区号",
+          "desc": "用于电话区号的选择，包括常用区号和区号列表。",
+          "sort": 25,
+          "show": true,
+          "taro": true,
+          "author": "wujiaqi52"
+        },
+        {
           "version": "2.0.0",
           "name": "Audio",
           "type": "component",
