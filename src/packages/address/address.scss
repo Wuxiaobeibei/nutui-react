@@ -50,6 +50,11 @@
       color: $color-primary-text;
     }
   }
+  &-common-title {
+    color: gray;
+    font-size: small;
+    padding: 0 15px;
+  }
 }
 
 [dir='rtl'] .nut-address,
@@ -62,4 +67,21 @@
       }
     }
   }
+}
+
+.nut-grid {
+  margin-bottom: 10px;
+}
+.nut-grid-border {
+  border-top-width: 0px;
+}
+.nut-grid-item-content-border {
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+.nut-grid-item-content {
+  padding: var(--nutui-grid-item-content-padding, 5px 10px);
+}
+.nut-grid-item-text {
+  font-size: 14px;
 }

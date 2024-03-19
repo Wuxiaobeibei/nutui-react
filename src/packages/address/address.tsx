@@ -6,7 +6,7 @@ import React, {
 } from 'react'
 import { ArrowLeft } from '@nutui/icons-react'
 import Popup from '@/packages/popup'
-import { CustomRender } from './customRender'
+import { CustomRender, HotCity } from './customRender'
 import { ExistRender } from './existRender'
 import { useConfig } from '@/packages/configprovider'
 import { AddressList } from './types'
@@ -39,6 +39,10 @@ export interface AddressProps extends CascaderProps {
   defaultIcon: React.ReactNode
   selectIcon: React.ReactNode
   backIcon: React.ReactNode
+  hotCity?: {
+    title: string
+    list: Array<HotCity>
+  }
   onSwitch?: (data: { type: string }) => void
   // 仅用于选择已有地址
   onExistSelect?: (data: AddressList) => void
@@ -88,6 +92,7 @@ export const InternalAddress: ForwardRefRenderFunction<
     defaultIcon,
     closeIcon,
     backIcon,
+    hotCity,
     onChange,
     onExistSelect,
     onClose,
@@ -166,6 +171,8 @@ export const InternalAddress: ForwardRefRenderFunction<
           optionKey={optionKey}
           type={currentType}
           height={height}
+          popup={false}
+          hotCity={hotCity}
           onClose={handleClose}
           onChange={(val: CascaderValue, params?: any) => {
             onChange?.(val, params)
